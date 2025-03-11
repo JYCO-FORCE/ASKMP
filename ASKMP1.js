@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         JYCOSCRIPT RENAISSANCE V1.7
 // @namespace    http://tampermonkey.net/
-// @version      2025-03-07 15:01 
+// @version      2025-03-11 15:01 
 // @description  try to take over the world!
 // @author       You
 // @match        http://*/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        Allah est le Créateur de toute chose, et de toute chose Il est Garant. Il détient les clefs des cieux et de la terre; et ceux qui ne croient pas aux versets d'Allah, ce sont ceux-là les perdants.
 // ==/UserScript==
-var version = "V1.1 2025-03-07 15:01";
+var version = "V1.1 2025-03-11 15:01";
 
 var CLP;
 var MAXO;
@@ -1269,7 +1269,7 @@ else if ( localStorage.getItem("SUCCESS") === '1' ) {
 setTimeout(function(){   window.location.href = "https://fr.tlscontact.com/personal/" + window.location.pathname.split("/")[2] + "/" + window.location.pathname.split("/")[3] +"/" + value ;   clearInterval(formGroup); }, 2000);
 }
 else if ( localStorage.getItem("SUCCESS") === null ) {
-setTimeout(function(){   window.location.href = "https://fr.tlscontact.com/personal/" + window.location.pathname.split("/")[2] + "/" + window.location.pathname.split("/")[3] +"/" + value ;   clearInterval(formGroup); }, 2000);
+setTimeout(function(){   window.location.href = "https://fr.tlscontact.com/appointment/" + window.location.pathname.split("/")[2] + "/" + window.location.pathname.split("/")[3] +"/" + value ;   clearInterval(formGroup); }, 2000);
 }
   }
 
