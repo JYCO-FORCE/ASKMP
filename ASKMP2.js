@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         JYCOSCRIPT RENAISSANCE V1.7
+// @name         JYCOSCRIPT RENAISSANCE V1.8
 // @namespace    http://tampermonkey.net/
 // @version      2025-03-11 15:01 
 // @description  try to take over the world!
