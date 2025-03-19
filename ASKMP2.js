@@ -368,6 +368,16 @@ document.getElementById("MOTIF").textContent = "Table statut : " + response.stat
  if ( localStorage.getItem("cloudflare") == "0" ) { setTimeout(function(){    window.open('https://fr.tlscontact.com/services/customerservice/api/tls/appointment/ma/maCAS2fr/table?cloudflare', '_blank');   }, 5e3); localStorage.setItem("cloudflare", 1); }
  setTimeout(function(){    Gettable();   }, 65e3);  
             
+    let url = window.location.href;
+let newUrl1 = url.replace("appointment", "personal");
+let newUrl2 = url.replace("personal", "appointment");            
+if (window.location.pathname.split("/")[1] === 'personal') {
+setTimeout(function(){    window.location.href = newUrl2 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
+}
+else if (window.location.pathname.split("/")[1] === 'appointment') {
+setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
+            }         
+            
     }
 else if (textResponse.includes("<!doctype html>") && textResponse.includes("<title>TLSContact Error</title>")) {
 console.log("TLSContact Error detected.");    
@@ -375,17 +385,23 @@ document.getElementById("MOTIF").textContent = "Table statut : " + response.stat
 message = "statut 429 : " + localStorage.getItem("Email"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("pwd"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("TLS_WEB_issuer") + "\n" +     localStorage.getItem("IP");
 ERROR();            
         setTimeout(function () {
-          location.reload();  //window.location = "https://intfiction.org/uploads/default/optimized/2X/e/e04f0a22ef639e39ff3bffd9c319e02146c95406_2_1035x541.png";
+   window.location.href = "https://blsspainmorocco.com/"     //location.reload();   // window.location = "https://intfiction.org/uploads/default/optimized/2X/e/e04f0a22ef639e39ff3bffd9c319e02146c95406_2_1035x541.png";
         }, 5000);
 } }
 
-else if (response.status === 404) {  console.error("statut : " + response.status); document.getElementById("MOTIF").textContent = "votre table statut : " + response.status;
-let url = window.location.href;
-let newUrl = url.replace("appointment", "personal");
-console.log(newUrl);
-setTimeout(function () {   window.location.href = newUrl  },200e3);
-message = "statut 404 : " + localStorage.getItem("Email"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("pwd"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("TLS_WEB_issuer") + "\n" +     localStorage.getItem("IP");
-        ERROR();}
+else if (response.status === 404) { 
+    
+                    localStorage.setItem("input429", 0); localStorage.setItem("FORMS429", 0); localStorage.removeItem('pageReloaded'); localStorage.setItem("403ERROR", 0);
+                document.getElementById("MOTIF").textContent = "Status 404 : Aucune date disponible . " + "\n" + "Derniere Actualisation" + " " + hours + " : " + minutes + " : " + seconds;
+                console.log("Status : Aucune date disponible . " + "\n" + "Derniere Actualisation" + " " + hours + " : " + minutes + " : " + seconds);
+
+                function getRandomDelay(min, max) {
+    return Math.random() * (max - min) + min;
+}
+            let delay = getRandomDelay(MINO, MAXO);  
+            console.log(`Attente de ${(delay / 1000).toFixed(2)} secondes avant la prochaine requête...`);
+            setTimeout(Gettable, delay);
+                                  }
 
             ////////// ESPACE 403 /////////////                     ////////// ESPACE 403 /////////////                ////////// ESPACE 403 /////////////
             ////////// ESPACE 403 /////////////                     ////////// ESPACE 403 /////////////                ////////// ESPACE 403 /////////////
@@ -398,7 +414,6 @@ else    if (response.status === 403) {
  if ( localStorage.getItem("cloudflare") == "0" ) { setTimeout(function(){    window.open('https://fr.tlscontact.com/services/customerservice/api/tls/appointment/ma/maCAS2fr/table?cloudflare', '_blank');   }, 5e3); localStorage.setItem("cloudflare", 1); }
  setTimeout(function(){    Gettable();   }, 65e3);            
             
-    /*
     let url = window.location.href;
 let newUrl1 = url.replace("appointment", "personal");
 let newUrl2 = url.replace("personal", "appointment");            
@@ -408,14 +423,13 @@ setTimeout(function(){    window.location.href = newUrl2 + "?__cf_chl_rt_tk=WQ41
 else if (window.location.pathname.split("/")[1] === 'appointment') {
 setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
             }    
-            */
         }
 else if (textResponse.includes("<!doctype html>") && textResponse.includes("<title>TLSContact Error</title>")) {
  document.getElementById("MOTIF").textContent = "Table statut : " + response.status + " TLSContact Error";            
 message = "statut 403 : " + localStorage.getItem("Email"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("pwd"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("TLS_WEB_issuer") + "\n" +     localStorage.getItem("IP");
 ERROR();            
         setTimeout(function () {
-        location.reload();   // window.location = "https://intfiction.org/uploads/default/optimized/2X/e/e04f0a22ef639e39ff3bffd9c319e02146c95406_2_1035x541.png";
+   window.location.href = "https://blsspainmorocco.com/"     //location.reload();   // window.location = "https://intfiction.org/uploads/default/optimized/2X/e/e04f0a22ef639e39ff3bffd9c319e02146c95406_2_1035x541.png";
         }, 5000);
 } }            
             /*
@@ -1193,6 +1207,12 @@ if (clickmembre) {         localStorage.setItem("membre"+localStorage.getItem("T
 setTimeout(function(){ var refi = window.location.pathname.split("/")[4]; localStorage.setItem("refi"+localStorage.getItem("TLS_WEB_issuer"), refi ); document.getElementById("MOTIF").textContent = '';
   const element = document.querySelector('.tls-inquiry-body button.button-neo-inside.-primary');
   if (element) { clearInterval(personal); document.getElementById("MOTIF").textContent = 'personal';
+                
+                    let url = window.location.href;
+let newUrl2 = url.replace("personal", "appointment");            
+if (window.location.pathname.split("/")[1] === 'personal') {
+setTimeout(function(){    window.location.href = newUrl2   }, 5e3);
+}
 }
 var script9 = document.createElement('script'); script9.src = "https://recaptcha.net/recaptcha/api.js?render=6LcTpXcfAAAAAM3VojNhyV-F1z92ADJIvcSZ39Y9"; document.head.appendChild(script9);
  },1e3); }}}}, 6000);
