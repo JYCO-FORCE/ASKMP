@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         JYCOSCRIPT RENAISSANCE V1.8
+// @name         JYCOSCRIPT RENAISSANCE V2
 // @namespace    http://tampermonkey.net/
 // @version      2025-03-11 15:01 
 // @description  try to take over the world!
@@ -369,14 +369,15 @@ document.getElementById("MOTIF").textContent = "Table statut : " + response.stat
  setTimeout(function(){    Gettable();   }, 65e3);  
             
     let url = window.location.href;
-let newUrl1 = url.replace("appointment", "personal");
+let newUrl1 = url.replace("appointment", "appointment");            
 let newUrl2 = url.replace("personal", "appointment");            
 if (window.location.pathname.split("/")[1] === 'personal') {
 setTimeout(function(){    window.location.href = newUrl2 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
 }
 else if (window.location.pathname.split("/")[1] === 'appointment') {
-setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
-            }         
+//setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
+setTimeout(function(){    location.reload()  }, 15e3);        
+}         
             
     }
 else if (textResponse.includes("<!doctype html>") && textResponse.includes("<title>TLSContact Error</title>")) {
@@ -385,8 +386,8 @@ document.getElementById("MOTIF").textContent = "Table statut : " + response.stat
 message = "statut 429 : " + localStorage.getItem("Email"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("pwd"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("TLS_WEB_issuer") + "\n" +     localStorage.getItem("IP");
 ERROR();            
         setTimeout(function () {
-   window.location.href = "https://blsspainmorocco.com/"     //location.reload();   // window.location = "https://intfiction.org/uploads/default/optimized/2X/e/e04f0a22ef639e39ff3bffd9c319e02146c95406_2_1035x541.png";
-        }, 5000);
+   location.reload();   //  window.location.href = "https://blsspainmorocco.com/"   // window.location = "https://intfiction.org/uploads/default/optimized/2X/e/e04f0a22ef639e39ff3bffd9c319e02146c95406_2_1035x541.png";
+        }, 150000);
 } }
 
 else if (response.status === 404) { 
@@ -421,16 +422,18 @@ if (window.location.pathname.split("/")[1] === 'personal') {
 setTimeout(function(){    window.location.href = newUrl2 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
 }
 else if (window.location.pathname.split("/")[1] === 'appointment') {
-setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
-            }    
+//setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
+setTimeout(function(){    location.reload()  }, 15e3);
+         
+}    
         }
 else if (textResponse.includes("<!doctype html>") && textResponse.includes("<title>TLSContact Error</title>")) {
  document.getElementById("MOTIF").textContent = "Table statut : " + response.status + " TLSContact Error";            
 message = "statut 403 : " + localStorage.getItem("Email"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("pwd"+localStorage.getItem("TLS_WEB_issuer")) + "\n" + localStorage.getItem("TLS_WEB_issuer") + "\n" +     localStorage.getItem("IP");
 ERROR();            
         setTimeout(function () {
-   window.location.href = "https://blsspainmorocco.com/"     //location.reload();   // window.location = "https://intfiction.org/uploads/default/optimized/2X/e/e04f0a22ef639e39ff3bffd9c319e02146c95406_2_1035x541.png";
-        }, 5000);
+   location.reload();   //  window.location.href = "https://blsspainmorocco.com/"   // window.location = "https://intfiction.org/uploads/default/optimized/2X/e/e04f0a22ef639e39ff3bffd9c319e02146c95406_2_1035x541.png";
+        }, 150000);
 } }            
             /*
 else if (response.status === 403 && textResponse.includes("<title>Just a moment...</title>") ) { localStorage.setItem("inputi403", 1);
