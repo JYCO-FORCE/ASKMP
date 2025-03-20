@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         JYCOSCRIPT RENAISSANCE V1.9
+// @name         JYCOSCRIPT RENAISSANCE V2
 // @namespace    http://tampermonkey.net/
 // @version      2025-03-11 15:01 
 // @description  try to take over the world!
@@ -66,11 +66,11 @@ let currentHour = getCurrentHour();
 // Assurer que currentHour est un nombre valide
 if (!isNaN(currentHour)) {
     if (currentHour >= 8 && currentHour < 10) {
-        MINO = 40e3; MAXO = 60e3;
+        MINO = 40e3; MAXO = 120e3;
     } else if (currentHour >= 10 && currentHour < 13) {
-        MINO = 30e3; MAXO = 60e3;
+        MINO = 50e3; MAXO = 120e3;
     } else if (currentHour >= 13 && currentHour < 18) {
-        MINO = 40e3; MAXO = 60e3;
+        MINO = 60e3; MAXO = 120e3;
     } else if (currentHour >= 18 && currentHour < 23) {
         MINO = 60e3; MAXO = 120e3;
     } else if (currentHour >= 23 || currentHour < 8) { // Pour inclure la nuit (0h-7h)
