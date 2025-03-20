@@ -369,14 +369,15 @@ document.getElementById("MOTIF").textContent = "Table statut : " + response.stat
  setTimeout(function(){    Gettable();   }, 65e3);  
             
     let url = window.location.href;
-let newUrl1 = url.replace("appointment", "personal");
+let newUrl1 = url.replace("appointment", "appointment");            
 let newUrl2 = url.replace("personal", "appointment");            
 if (window.location.pathname.split("/")[1] === 'personal') {
 setTimeout(function(){    window.location.href = newUrl2 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
 }
 else if (window.location.pathname.split("/")[1] === 'appointment') {
-setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
-            }         
+//setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
+setTimeout(function(){    location.reload()  }, 15e3);        
+}         
             
     }
 else if (textResponse.includes("<!doctype html>") && textResponse.includes("<title>TLSContact Error</title>")) {
@@ -421,8 +422,10 @@ if (window.location.pathname.split("/")[1] === 'personal') {
 setTimeout(function(){    window.location.href = newUrl2 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
 }
 else if (window.location.pathname.split("/")[1] === 'appointment') {
-setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
-            }    
+//setTimeout(function(){    window.location.href = newUrl1 + "?__cf_chl_rt_tk=WQ41.uvPHkoLBVJle0EB2QYCC04DGMmcloWb80W7FGM-1739911038-1.0.1.1-iJDr.hYp55vEjRkRq64C1h0fy0ypqKYHJtbu2o0JXqo"   }, 15e3);
+setTimeout(function(){    location.reload()  }, 15e3);
+         
+}    
         }
 else if (textResponse.includes("<!doctype html>") && textResponse.includes("<title>TLSContact Error</title>")) {
  document.getElementById("MOTIF").textContent = "Table statut : " + response.status + " TLSContact Error";            
