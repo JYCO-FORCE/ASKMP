@@ -289,6 +289,7 @@ setTimeout(function () { window.location.href = window.location.href;  }, 80e3);
         const fVisaType = values.f_visa_type;
         const fTravPurpose = values.f_trav_purpose;
         const fiAppointmentType = values.fi_appointment_type;
+        const fi_csl_appointment_type = values.fi_csl_appointment_type;
         const f_xcopy_ug_type = values.f_xcopy_ug_type;
         ///////////////////////////////////////////////////////////////////////////////////////////
     const fields = {
@@ -325,6 +326,7 @@ setTimeout(function () { window.location.href = window.location.href;  }, 80e3);
 
         localStorage.setItem("membre"+localStorage.getItem("TLS_WEB_issuer"), fIdCount);
         localStorage.setItem("fiAppointmentType"+localStorage.getItem("TLS_WEB_issuer"), fiAppointmentType);
+        localStorage.setItem("fi_csl_appointment_type"+localStorage.getItem("TLS_WEB_issuer"), fiAppointmentType);
         localStorage.setItem("f_xcopy_ug_type"+localStorage.getItem("TLS_WEB_issuer"), f_xcopy_ug_type);
         localStorage.setItem("f_trav_purpose"+localStorage.getItem("TLS_WEB_issuer"), fTravPurpose );
         const ref = window.location.pathname.split("/")[4];
@@ -346,6 +348,7 @@ const minutes = now.getUTCMinutes();
 const seconds = now.getUTCSeconds();
 
 var Type = localStorage.getItem("fiAppointmentType"+localStorage.getItem("TLS_WEB_issuer"));
+var Type2 = localStorage.getItem("fi_csl_appointment_type"+localStorage.getItem("TLS_WEB_issuer"));
 
 const cookieNameTable = "XSRF-TOKEN";
 const cookieValueTable = document.cookie.split('; ').find(row => row.startsWith(cookieNameTable)).split('=')[1];
