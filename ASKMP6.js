@@ -326,7 +326,7 @@ setTimeout(function () { window.location.href = window.location.href;  }, 80e3);
 
         localStorage.setItem("membre"+localStorage.getItem("TLS_WEB_issuer"), fIdCount);
         localStorage.setItem("fiAppointmentType"+localStorage.getItem("TLS_WEB_issuer"), fiAppointmentType);
-        localStorage.setItem("fi_csl_appointment_type"+localStorage.getItem("TLS_WEB_issuer"), fiAppointmentType);
+        localStorage.setItem("fi_csl_appointment_type"+localStorage.getItem("TLS_WEB_issuer"), fi_csl_appointment_type);
         localStorage.setItem("f_xcopy_ug_type"+localStorage.getItem("TLS_WEB_issuer"), f_xcopy_ug_type);
         localStorage.setItem("f_trav_purpose"+localStorage.getItem("TLS_WEB_issuer"), fTravPurpose );
         const ref = window.location.pathname.split("/")[4];
@@ -354,7 +354,7 @@ const cookieNameTable = "XSRF-TOKEN";
 const cookieValueTable = document.cookie.split('; ').find(row => row.startsWith(cookieNameTable)).split('=')[1];
   const formDataTable = {};
 // INDI
-        const url = `https://fr.tlscontact.com/services/customerservice/api/tls/appointment/ma/${center}/table?client=fr&formGroupId=${ref}&appointmentType=${Type}&appointmentStage=appointment&jyco=${tt}`;
+        const url = `https://fr.tlscontact.com/services/customerservice/api/tls/appointment/ma/${center}/table?client=fr&formGroupId=${ref}&appointmentType=${Type2}&appointmentStage=appointment&jyco=${tt}`;
         fetch(url , {
   headers: {
     "x-xsrf-token": cookieValueTable,
