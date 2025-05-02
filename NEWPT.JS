@@ -66,9 +66,9 @@ let currentHour = getCurrentHour();
 // Assurer que currentHour est un nombre valide
 if (!isNaN(currentHour)) {
     if (currentHour >= 8 && currentHour < 10) {
-        MINO = 40e3; MAXO = 1000e3;
+        MINO = 40e3; MAXO = 100e3;
     } else if (currentHour >= 10 && currentHour < 13) {
-        MINO = 50e3; MAXO = 1000e3;
+        MINO = 50e3; MAXO = 100e3;
     } else if (currentHour >= 13 && currentHour < 18) {
         MINO = 60e3; MAXO = 100e3;
     } else if (currentHour >= 18 && currentHour < 23) {
@@ -94,7 +94,7 @@ switch (pathSegment) {
         var cas1 = 25; var cas2 = 10; var cas3 = 15; var cas4 = 1;
         break;
     case 'maCAS2fr':
-        cas1 = 4; cas2 = 15; cas3 = 15; cas4 = 1;
+        cas1 = 4; cas2 = 5; cas3 = 5; cas4 = 1;
         break;
     case 'maTNG2fr':
         cas1 = 15; cas2 = 15; cas3 = 15; cas4 = 1;
