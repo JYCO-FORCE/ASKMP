@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         JYCOSCRIPT RENAISSANCE V2
 // @namespace    http://tampermonkey.net/
-// @version      2025-04-04 15:01 
+// @version      2025-05-03 15:01 
 // @description  try to take over the world!
 // @author       You
 // @match        http://*/*
