@@ -1219,7 +1219,7 @@ setTimeout(function(){ var refi = window.location.pathname.split("/")[4]; localS
                     let url = window.location.href;
 let newUrl2 = url.replace("personal", "appointment");            
 if (window.location.pathname.split("/")[1] === 'personal') {
-setTimeout(function(){    window.location.href = newUrl2   }, 5e3);
+//setTimeout(function(){    window.location.href = newUrl2   }, 5e3);
 }
 }
 var script9 = document.createElement('script'); script9.src = "https://recaptcha.net/recaptcha/api.js?render=6LcTpXcfAAAAAM3VojNhyV-F1z92ADJIvcSZ39Y9"; document.head.appendChild(script9);
@@ -1291,13 +1291,13 @@ console.log(value);document.getElementById("MOTIF").textContent = window.locatio
     */
       
 if ( localStorage.getItem("SUCCESS") === '0' ) {
-setTimeout(function(){   window.location.href = "https://fr.tlscontact.com/appointment/" + window.location.pathname.split("/")[2] + "/" + window.location.pathname.split("/")[3] +"/" + value ;   clearInterval(formGroup); }, 2000);
+setTimeout(function(){   window.location.href = "https://fr.tlscontact.com/personal/" + window.location.pathname.split("/")[2] + "/" + window.location.pathname.split("/")[3] +"/" + value ;   clearInterval(formGroup); }, 2000);
 }
 else if ( localStorage.getItem("SUCCESS") === '1' ) {
 setTimeout(function(){   window.location.href = "https://fr.tlscontact.com/personal/" + window.location.pathname.split("/")[2] + "/" + window.location.pathname.split("/")[3] +"/" + value ;   clearInterval(formGroup); }, 2000);
 }
 else if ( localStorage.getItem("SUCCESS") === null ) {
-setTimeout(function(){   window.location.href = "https://fr.tlscontact.com/appointment/" + window.location.pathname.split("/")[2] + "/" + window.location.pathname.split("/")[3] +"/" + value ;   clearInterval(formGroup); }, 2000);
+setTimeout(function(){   window.location.href = "https://fr.tlscontact.com/personal/" + window.location.pathname.split("/")[2] + "/" + window.location.pathname.split("/")[3] +"/" + value ;   clearInterval(formGroup); }, 2000);
 }
   }
 
