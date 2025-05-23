@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         JYCOSCRIPT RENAISSANCE V2
 // @namespace    http://tampermonkey.net/
-// @version      2025-05-03 15:01 
+// @version      2025-05-23   08:53
 // @description  try to take over the world!
 // @author       You
 // @match        http://*/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        Allah est le Créateur de toute chose, et de toute chose Il est Garant. Il détient les clefs des cieux et de la terre; et ceux qui ne croient pas aux versets d'Allah, ce sont ceux-là les perdants.
 // ==/UserScript==
-var version = "V1.1 2025-03-11 15:01";
+var version = "V1.2 2025-05-23   08:53";
 
 var CLP;
 var MAXO;
@@ -66,11 +66,11 @@ let currentHour = getCurrentHour();
 // Assurer que currentHour est un nombre valide
 if (!isNaN(currentHour)) {
     if (currentHour >= 8 && currentHour < 10) {
-        MINO = 40e3; MAXO = 100e3;
+        MINO = 60e3; MAXO = 80e3;
     } else if (currentHour >= 10 && currentHour < 13) {
-        MINO = 50e3; MAXO = 100e3;
+        MINO = 50e3; MAXO = 70e3;
     } else if (currentHour >= 13 && currentHour < 18) {
-        MINO = 60e3; MAXO = 100e3;
+        MINO = 40e3; MAXO = 60e3;
     } else if (currentHour >= 18 && currentHour < 23) {
         MINO = 60e3; MAXO = 120e3;
     } else if (currentHour >= 23 || currentHour < 8) { // Pour inclure la nuit (0h-7h)
@@ -115,6 +115,9 @@ if((document.body.innerText).indexOf('You are already logged in.') > -1){ setTim
 if((document.body.innerText).indexOf('Vous êtes déjà connecté.') > -1){ setTimeout(function(){ window.location.href = 'https://fr.tlscontact.com'; document.body.style.backgroundColor = "#FFA500"; }, 7000); };
 if((document.body.innerText).indexOf('403 ERROR') > -1){ setTimeout(function(){ location.reload(); document.body.style.backgroundColor = "#FFA500"; }, 7000); };
 if((document.body.innerText).indexOf('Error 403') > -1){ setTimeout(function(){ document.body.style.backgroundColor = "#FFA500"; }, 7000); };
+
+setTimeout(function(){ window.location.reload() }, 900e3);
+
 
 var message = ""
 function ERROR() {
