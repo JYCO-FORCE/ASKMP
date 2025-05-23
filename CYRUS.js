@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         JYCOSCRIPT RENAISSANCE V2
+// @name         JYCOSCRIPT RENAISSANCE V3
 // @namespace    http://tampermonkey.net/
 // @version      2025-05-23  08:53
 // @description  try to take over the world!
@@ -583,7 +583,7 @@ var s ;
 
                     if (fiAppointmentType2 && typeof fiAppointmentType2 === "string") {
     var membre =  localStorage.getItem("membre"+localStorage.getItem("TLS_WEB_issuer"));
-if ( membre  > 1 ) { var t = "F" } else { t = "I" }
+if ( membre  > 0 ) { var t = "F" } else { t = "I" }
 if (fiAppointmentType2.includes("PRIMO") || fiAppointmentType2.includes("primo") || fiAppointmentType2.includes("Primo") || fiAppointmentType2.includes("privee") ) { s = 9; CLP = cas1;
   typo2 = "PRIMO" + t + window.location.pathname.split("/")[3];  console.log(typo2);
 } else if (fiAppointmentType2.includes("VISE") || fiAppointmentType2.includes("vise") || fiAppointmentType2.includes("Vise") || fiAppointmentType2.includes("visé")) { s = 18; CLP = cas2;
