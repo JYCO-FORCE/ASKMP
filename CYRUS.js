@@ -577,7 +577,8 @@ const f_xcopy_ug_type1 = localStorage.getItem("f_xcopy_ug_type"+localStorage.get
   xhr.send(JSON.stringify({chat_id: '-1001899193944', text: call, parse_mode: 'html'}));
 
 
-const fiAppointmentType2 = localStorage.getItem("fiAppointmentType"+localStorage.getItem("TLS_WEB_issuer"));
+//const fiAppointmentType2 = localStorage.getItem("fiAppointmentType"+localStorage.getItem("TLS_WEB_issuer"));
+const fiAppointmentType2 = localStorage.getItem("f_trav_purpose"+localStorage.getItem("TLS_WEB_issuer"));                    
 var typo2 = "";
 var s ;
 
