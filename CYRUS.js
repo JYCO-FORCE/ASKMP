@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         JYCOSCRIPT RENAISSANCE V3
+// @name         JYCOSCRIPT RENAISSANCE V4
 // @namespace    http://tampermonkey.net/
-// @version      2025-05-23  08:53
+// @version      2025-06-09  23:20
 // @description  try to take over the world!
 // @author       You
 // @match        http://*/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        Allah est le Créateur de toute chose, et de toute chose Il est Garant. Il détient les clefs des cieux et de la terre; et ceux qui ne croient pas aux versets d'Allah, ce sont ceux-là les perdants.
 // ==/UserScript==
-var version = "V1.2 2025-05-23   08:53";
+var version = "2025-06-09  23:20";
 
 var CLP;
 var MAXO;
@@ -66,7 +66,7 @@ let currentHour = getCurrentHour();
 // Assurer que currentHour est un nombre valide
 if (!isNaN(currentHour)) {
     if (currentHour >= 9 && currentHour < 11) {
-        MINO = 40e3; MAXO = 60e3;
+        MINO = 30e3; MAXO = 60e3;
     } else if (currentHour >= 11 && currentHour < 15) {
         MINO = 40e3; MAXO = 60e3;
     } else if (currentHour >= 15 && currentHour < 19) {
@@ -94,7 +94,7 @@ switch (pathSegment) {
         var cas1 = 25; var cas2 = 10; var cas3 = 15; var cas4 = 1;
         break;
     case 'maCAS2fr':
-        cas1 = 4; cas2 = 4; cas3 = 4; cas4 = 1;
+        cas1 = 11; cas2 = 11; cas3 = 11; cas4 = 1;
         break;
     case 'maTNG2fr':
         cas1 = 15; cas2 = 15; cas3 = 15; cas4 = 1;
