@@ -116,7 +116,7 @@ if((document.body.innerText).indexOf('Vous êtes déjà connecté.') > -1){ setT
 if((document.body.innerText).indexOf('403 ERROR') > -1){ setTimeout(function(){ location.reload(); document.body.style.backgroundColor = "#FFA500"; }, 7000); };
 if((document.body.innerText).indexOf('Error 403') > -1){ setTimeout(function(){ document.body.style.backgroundColor = "#FFA500"; }, 7000); };
 
-setTimeout(function(){ window.location.reload() }, 900e3);
+setTimeout(function(){ window.location.reload() }, 2000e3);
 
 
 var message = ""
@@ -1911,7 +1911,8 @@ const firebaseConfig = {
    firebase.initializeApp(firebaseConfig);
     },5e3);
 
-const fiAppointmentType2 = localStorage.getItem("fiAppointmentType"+localStorage.getItem("TLS_WEB_issuer"));
+//const fiAppointmentType2 = localStorage.getItem("fiAppointmentType"+localStorage.getItem("TLS_WEB_issuer"));
+   const fiAppointmentType2 =   localStorage.getItem("f_trav_purpose"+localStorage.getItem("TLS_WEB_issuer"))
 let typo2 = "";
 var membre = localStorage.getItem("membre"+localStorage.getItem("TLS_WEB_issuer"));
       if ( membre  > 1 ) { var t = "F" } else { t = "I" }
