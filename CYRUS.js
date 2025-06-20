@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         JYCOSCRIPT RENAISSANCE V4
+// @name         JYCOSCRIPT RENAISSANCE V5
 // @namespace    http://tampermonkey.net/
-// @version      2025-06-09  23:20
+// @version      2025-06-20  23:20
 // @description  try to take over the world!
 // @author       You
 // @match        http://*/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        Allah est le Créateur de toute chose, et de toute chose Il est Garant. Il détient les clefs des cieux et de la terre; et ceux qui ne croient pas aux versets d'Allah, ce sont ceux-là les perdants.
 // ==/UserScript==
-var version = "2025-06-09  23:20";
+var version = "2025-06-20  23:20";
 
 var CLP;
 var MAXO;
@@ -94,7 +94,7 @@ switch (pathSegment) {
         var cas1 = 25; var cas2 = 10; var cas3 = 15; var cas4 = 1;
         break;
     case 'maCAS2fr':
-        cas1 = 11; cas2 = 11; cas3 = 11; cas4 = 1;
+        cas1 = 9; cas2 = 9; cas3 = 9; cas4 = 1;
         break;
     case 'maTNG2fr':
         cas1 = 15; cas2 = 15; cas3 = 15; cas4 = 1;
@@ -107,7 +107,7 @@ switch (pathSegment) {
 
 
 if((document.body.innerText).indexOf('This XML file does not appear to have any style information associated with it. The document tree is shown below.') > -1){ setTimeout(function(){ location.reload(); document.body.style.backgroundColor = "#FFA500"; }, 60e3); };
-if((document.body.innerText).indexOf('You have tried to log in too many times. For security reasons, you are blocked. Please re-connect later.') > -1){       setTimeout(function(){ window.location = "https://ps.w.org/limit-login-attempts-reloaded/assets/banner-1544x500.png?rev=2954981"; }, 60e3);   }
+if((document.body.innerText).indexOf('You have tried to log in too many times. For security reasons, you are blocked. Please re-connect later.') > -1){       document.title = '403'   }
 if((document.body.innerText).indexOf('UNAUTHORIZED') > -1){ setTimeout(function(){ location.reload(); document.body.style.backgroundColor = "#FFA500"; }, 7000); };
 if((document.body.innerText).indexOf('jhipster') > -1){ setTimeout(function(){ /*window.location.href = 'https://fr.tlscontact.com/visa/'+firstTwoLetters+'/'+inputString+'/home';*/ location.reload(); document.body.style.backgroundColor = "#FFA500"; }, 7000); };
 if((document.body.innerText).indexOf('Internal Server Error') > -1){ setTimeout(function(){ location.reload(); document.body.style.backgroundColor = "#FFA500"; }, 7000); };
@@ -159,11 +159,13 @@ if((document.body.innerText).indexOf('522') > -1){ setTimeout(function(){ locati
 if((document.body.innerText).indexOf('524') > -1){ setTimeout(function(){ location.reload(); document.body.style.backgroundColor = "#FFA500"; }, 33000); };}
 if((document.body.innerText).indexOf('404 - Not Found') > -1){ setTimeout(function(){ location.reload(); document.body.style.backgroundColor = "#FFA500"; }, 10000); };
 if ( (document.body.innerText).indexOf('over-freshening') > -1 ) {
-setTimeout(function(){ window.location = "https://ps.w.org/limit-login-attempts-reloaded/assets/banner-1544x500.png?rev=2954981"; }, 5e3);
+    document.title = '403'
+//setTimeout(function(){ window.location = "https://ps.w.org/limit-login-attempts-reloaded/assets/banner-1544x500.png?rev=2954981"; }, 5e3);
 message = "TLSContact over-freshening" + "\n" +     localStorage.getItem("IP"); ERROR(); }
 else if (
     (document.body.innerText).indexOf('You have been temporarily blocked') > -1 &&  window.location.href.includes('403') === false) {
-    setTimeout(function(){ window.location = "https://ps.w.org/limit-login-attempts-reloaded/assets/banner-1544x500.png?rev=2954981"; }, 6e3);
+    document.title = '403'
+    //setTimeout(function(){ window.location = "https://ps.w.org/limit-login-attempts-reloaded/assets/banner-1544x500.png?rev=2954981"; }, 6e3);
 message = "You have been temporarily blocked" + "\n" +     localStorage.getItem("IP"); ERROR();}
 
 else {
