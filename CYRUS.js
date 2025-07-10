@@ -68,13 +68,13 @@ if (!isNaN(currentHour)) {
     if (currentHour >= 9 && currentHour < 11) {
         MINO = 30e3; MAXO = 60e3;
     } else if (currentHour >= 11 && currentHour < 15) {
-        MINO = 40e3; MAXO = 60e3;
+        MINO = 20e3; MAXO = 60e3;
     } else if (currentHour >= 15 && currentHour < 19) {
-        MINO = 40e3; MAXO = 60e3;
+        MINO = 30e3; MAXO = 60e3;
     } else if (currentHour >= 19 && currentHour < 23) {
-        MINO = 50e3; MAXO = 60e3;
+        MINO = 30e3; MAXO = 50e3;
     } else if (currentHour >= 23 || currentHour < 9) { // Pour inclure la nuit (0h-7h)
-        MINO = 40e3; MAXO =100e3;
+        MINO = 20e3; MAXO =60e3;
     }
 } else {
     console.error("Erreur: currentHour n'est pas un nombre valide.");
