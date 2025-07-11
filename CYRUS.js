@@ -94,7 +94,7 @@ switch (pathSegment) {
         var cas1 = 25; var cas2 = 10; var cas3 = 15; var cas4 = 1;
         break;
     case 'maCAS2fr':
-        cas1 = 9; cas2 = 9; cas3 = 9; cas4 = 1;
+        cas1 = 7; cas2 = 7; cas3 = 7; cas4 = 1;
         break;
     case 'maTNG2fr':
         cas1 = 15; cas2 = 15; cas3 = 15; cas4 = 1;
@@ -749,7 +749,7 @@ const element = document.querySelector('#MOTIF');element.style.backgroundColor =
                     const removedButtons = document.querySelectorAll('.tls-button-link');
                     if (removedButtons.length > 1) {
 
-                        if (consecutiveErrors >= 2) {
+                        if (consecutiveErrors >= 4) {
             console.warn("Trop d'erreurs 400 consécutives. Arrêt des tentatives de clics.");
                 console.log("Réinitialisation des erreurs et actualisation de la page...");
                         setTimeout(() => { location.reload(); }, 100000);
@@ -2225,9 +2225,9 @@ if (response.status === 400) {
             document.getElementById("MOTIF").textContent = `Votre Book statut : ${response.status} - ${errorText}`;
             const element = document.querySelector('#MOTIF');element.style.backgroundColor = 'red';
                     const removedButtons = document.querySelectorAll('.tls-button-link');
-                    if (removedButtons.length > 1) {
+                    if (removedButtons.length > 5) {
 
-                        if (consecutiveErrors >= 2) {
+                        if (consecutiveErrors >= 4) {
             console.warn("Trop d'erreurs 400 consécutives. Arrêt des tentatives de clics.");
                 console.log("Réinitialisation des erreurs et actualisation de la page...");
                         setTimeout(() => { location.reload(); }, 100000);
